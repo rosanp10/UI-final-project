@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}Animal Mating Types - Interactive Learning Game{% endblock %}
+
+{% block content %}
+  <section id="screen-intro" class="min-vh-100 d-flex align-items-center justify-content-center position-relative overflow-hidden text-white">
+    <div class="card bg-dark border-success border-opacity-25 text-center intro-card px-4 px-md-5 py-3 py-md-5">
+      
+      <div class="badge rounded-pill bg-success text-white px-3 py-2 mb-3">🐾 Animal World Explorer</div>
+
+      <h1 class="display-4 fw-bold lh-1 mb-3">Mating in the<br><span class="text-success">Animal World</span></h1>
+
+      <p class="lead text-white-50 mx-auto mb-4 subtitle">
+        Discover how animals attract mates through striking displays, competition, and courtship.
+      </p>
+
+      <!-- Important Div -->
+      <div class="row g-3 justify-content-center intro-stats mb-4">
+
+        <div class="col-12 col-md-4">
+          <div class="rounded-3 bg-secondary bg-opacity-10 border border-success border-opacity-25 py-3 h-100">
+            <div class="fs-3 mb-1">🎬</div>
+            <strong class="d-block fs-3 fw-bold">1</strong>
+            <small class="text-uppercase text-white-50 small">Intro Page</small>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="rounded-3 bg-secondary bg-opacity-10 border border-success border-opacity-25 py-3 h-100">
+            <div class="fs-3 mb-1">❓</div>
+            <strong class="d-block fs-3 fw-bold">0</strong>
+            <small class="text-uppercase text-white-50 small">Quiz Questions</small>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="rounded-3 bg-secondary bg-opacity-10 border border-success border-opacity-25 py-3 h-100">
+            <div class="fs-3 mb-1">💾</div>
+            <strong class="d-block fs-3 fw-bold">0</strong>
+            <small class="text-uppercase text-white-50 small">Saved Scores</small>
+          </div>
+        </div>
+      <!-- End of important div -->
+        
+      </div>
+
+      <button class="btn btn-success btn-lg px-4" onclick="location.href='/lesson'">Explore</button>
+    </div>
+  </section>
+{% endblock %}

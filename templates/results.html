@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}Results - Animal World{% endblock %}
+
+{% block content %}
+  <section class="min-vh-100 d-flex align-items-center justify-content-center text-white py-5">
+    <div class="lesson-container px-4 px-md-5 text-center">
+      <div class="badge rounded-pill {% if is_correct %}bg-success{% else %}bg-danger{% endif %} text-white px-3 py-2 mb-3">Results</div>
+
+      <h2 class="display-5 fw-bold mb-4">
+        {% if is_correct %}Correct{% else %}Wrong{% endif %}
+      </h2>
+
+      <div class="mx-auto" style="max-width: 520px;">
+        <div class="rounded-3 bg-dark border border-success border-opacity-25 p-4 mb-4 text-start">
+          <p class="text-white-50 mb-2">Your answer: <strong class="text-white">{{ selected_answer or 'No answer selected' }}</strong></p>
+          <p class="text-white-50 mb-0">Correct answer: <strong class="text-white">Competition</strong></p>
+        </div>
+
+        <a href="/quiz" class="btn btn-success px-4 me-2">Try Again</a>
+        <a href="/lesson" class="btn btn-secondary px-4">Back to Lesson</a>
+      </div>
+    </div>
+  </section>
+{% endblock %}

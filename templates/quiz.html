@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}Quiz - Animal World{% endblock %}
+
+{% block content %}
+  <section class="min-vh-100 d-flex align-items-center justify-content-center text-white py-5">
+    <div class="lesson-container px-4 px-md-5 text-center">
+      <div class="badge rounded-pill bg-success text-white px-3 py-2 mb-3">Quiz Time</div>
+      <h2 class="display-5 fw-bold mb-4">Which strategy do deer use?</h2>
+
+      <form class="mx-auto" style="max-width: 520px;" method="post" action="/quiz">
+        <div class="rounded-3 bg-dark border border-success border-opacity-25 p-4 mb-4 text-start">
+          <div class="fs-5 fw-semibold mb-3">Question 1</div>
+          <p class="lead text-white-50 mb-4">Which strategy do deer use?</p>
+
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="radio" name="answer" id="answer-visual" value="visual attraction" required>
+            <label class="form-check-label text-white" for="answer-visual">Visual attraction</label>
+          </div>
+
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="radio" name="answer" id="answer-competition" value="competition">
+            <label class="form-check-label text-white" for="answer-competition">Competition</label>
+          </div>
+
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="radio" name="answer" id="answer-courtship" value="courtship behavior">
+            <label class="form-check-label text-white" for="answer-courtship">Courtship behavior</label>
+          </div>
+        </div>
+
+        <button class="btn btn-success btn-lg px-4 w-100 mb-3" type="submit">Submit Answer</button>
+
+        <div class="text-center">
+          <a href="/lesson" class="btn btn-secondary px-4 me-2">Back to Lesson</a>
+          <a href="/" class="btn btn-success px-4">Home</a>
+        </div>
+      </form>
+    </div>
+  </section>
+{% endblock %}
