@@ -21,21 +21,47 @@ def quiz():
 
 @app.route("/quiz", methods=["POST"])
 def quiz_submit():
-    selected_answer = request.form.get("answer")
-    session["quiz_answer"] = selected_answer
+    answer1 = request.form.get("answer1")
+    answer2 = request.form.get("answer2")
+    answer3 = request.form.get("answer3")
+    answer4 = request.form.get("answer4")
+    session["quiz_answer1"] = answer1
+    session["quiz_answer2"] = answer2
+    session["quiz_answer3"] = answer3
+    session["quiz_answer4"] = answer4
     return redirect(url_for("results"))
 
 
 @app.route("/results")
 def results():
-    selected_answer = session.get("quiz_answer")
-    correct_answer = "competition"
-    is_correct = selected_answer == correct_answer
+    answer1 = session.get("quiz_answer1")
+    answer2 = session.get("quiz_answer2")
+    answer3 = session.get("quiz_answer3")
+    answer4 = session.get("quiz_answer4")
+    correct_answer1 = "competition"
+    correct_answer2 = "visual display"
+    correct_answer3 = "courtship behavior"
+    correct_answer4 = "visual attraction"
+    is_correct1 = answer1 == correct_answer1
+    is_correct2 = answer2 == correct_answer2
+    is_correct3 = answer3 == correct_answer3
+    is_correct4 = answer4 == correct_answer4
+    total_correct = sum([is_correct1, is_correct2, is_correct3, is_correct4])
     return render_template(
         "results.html",
-        selected_answer=selected_answer,
-        correct_answer=correct_answer,
-        is_correct=is_correct,
+        answer1=answer1,
+        correct_answer1=correct_answer1,
+        is_correct1=is_correct1,
+        answer2=answer2,
+        correct_answer2=correct_answer2,
+        is_correct2=is_correct2,
+        answer3=answer3,
+        correct_answer3=correct_answer3,
+        is_correct3=is_correct3,
+        answer4=answer4,
+        correct_answer4=correct_answer4,
+        is_correct4=is_correct4,
+        total_correct=total_correct,
     )
 
 

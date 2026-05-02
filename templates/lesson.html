@@ -5,62 +5,84 @@
 {% block content %}
   <section id="screen-lesson" class="min-vh-100 d-flex align-items-center justify-content-center position-relative overflow-hidden text-white py-5">
     <div class="lesson-container px-4 px-md-5">
-      <a href="/" class="btn btn-secondary mb-4">← Back to Home</a>
+        <a href="/" class="btn btn-secondary mb-4">← Back to Home</a>
 
-      <div class="text-center mb-5">
-        <h2 class="display-5 fw-bold mb-4">Lesson Objectives</h2>
-      </div>
-
-      <div class="lesson-content mx-auto" style="max-width: 800px;">
-        <p class="lead text-white-50 mb-4">
-            By the end, you’ll be able to identify 3 mating strategies animals use to reproduce.
-        </p>
-
-        <div class="mb-5">
-          <h4 class="text-success mb-3">Competition</h4>
-          <h4 class="text-success mb-3">Visual</h4>
-          <h4 class="text-success mb-3">courtship</h4>
-
-          <ul class="text-white-50 list-unstyled">
-            <li class="mb-2">🦚 <strong>Peacocks</strong> display their vibrant tail feathers with intricate patterns</li>
-            <li class="mb-2">💃 <strong>Birds of Paradise</strong> perform elaborate dances and acrobatic displays</li>
-            <li class="mb-2">✨ <strong>Fireflies</strong> use bioluminescent signals to communicate</li>
-            <li class="mb-2">🐟 <strong>Fish</strong> change colors and perform synchronized swimming patterns</li>
-            <li class="mb-2">🦚 <strong>Peacocks</strong> Looks & Displays </li>
-            <li class="mb-2">💃 <strong>Birds of Paradise</strong> Strength & Dominance</li>
-            <li class="mb-2">✨ <strong>Fireflies</strong> use bioluminescent signals to communicate</li>
-            <li class="mb-2">🐟 <strong>Fish</strong> Actions & Rituals</li>
-
-          </ul>
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold mb-4">Lesson Objectives</h2>
         </div>
 
-        <div class="mb-5">
-          <h4 class="text-success mb-3">Strategy Goal: </h4>
-          <p class="text-white-50">
-                Signal fitness and increase reproductive success
-          </p>
+        <div class="lesson-content mx-auto" style="max-width: 800px;">
+            <p class="lead text-white-50 mb-4">
+                By the end, you’ll be able to identify 3 mating strategies animals use to reproduce.
+            </p>
+
+            <div class="mb-5">
+            <h4 class="text-success mb-3">Competition</h4>
+            <h4 class="text-success mb-3">Visual</h4>
+            <h4 class="text-success mb-3">courtship</h4>
+
+            <ul class="text-white-50 list-unstyled">
+                <li class="mb-2">🦚 <strong>Peacocks</strong> display their vibrant tail feathers with intricate patterns</li>
+                <li class="mb-2">💃 <strong>Birds of Paradise</strong> perform elaborate dances and acrobatic displays</li>
+                <li class="mb-2">✨ <strong>Fireflies</strong> use bioluminescent signals to communicate</li>
+                <li class="mb-2">🐟 <strong>Fish</strong> change colors and perform synchronized swimming patterns</li>
+                <li class="mb-2">🦚 <strong>Peacocks</strong> Looks & Displays </li>
+                <li class="mb-2">💃 <strong>Birds of Paradise</strong> Strength & Dominance</li>
+                <li class="mb-2">✨ <strong>Fireflies</strong> use bioluminescent signals to communicate</li>
+                <li class="mb-2">🐟 <strong>Fish</strong> Actions & Rituals</li>
+
+            </ul>
+            </div>
+
+            <div class="mb-5">
+                <h4 class="text-success mb-3">Strategy Goal: </h4>
+                <p class="text-white-50">
+                        Signal fitness and increase reproductive success
+                </p>
+            </div>
+
+            <div class="text-center">
+            <a href="/" class="btn btn-success btn-lg px-4 me-3">Home</a>
+            <button id="begin-lesson-btn" class="btn btn-outline-success btn-lg px-4" type="button">Begin Lesson →</button>
+            </div>
         </div>
 
-        <div class="text-center">
-          <a href="/" class="btn btn-success btn-lg px-4 me-3">Home</a>
-          <button id="begin-lesson-btn" class="btn btn-outline-success btn-lg px-4" type="button">Begin Lesson →</button>
-        </div>
-      </div>
+        <!-- slides of lesson-slides -->
 
-      <div id="lesson-video" class="lesson-content mx-auto mt-5" style="max-width: 800px; display: none;">
-        <div class="text-center mb-4">
-          <h3 class="fw-bold mb-4">Deer Competing for Mates</h3>
-          <div class="ratio ratio-16x9 mx-auto mb-4">
-            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Deer Competing for Mates" allowfullscreen loading="lazy"></iframe>
-          </div>
-          <p class="lead text-white-50">
-            Some animals compete physically, and the strongest gains access to mates.
-          </p>
-        </div>
+            <!-- competition -->
+        <div id="lesson-slides" class="lesson-content mx-auto mt-5" style="max-width: 800px; display: none;">
+            <div class="slide text-center mb-4" data-index="0">
+                <h3 class="fw-bold mb-4">Competition: Strength & Dominance</h3>
+                <div class="ratio ratio-16x9 mx-auto mb-4">
+                    <iframe src="https://www.youtube.com/embed/wm-fZ-20rOc" title="Deer Competing for Mates" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <p class="lead text-white-50">Some animals compete physically, and the strongest gains access to mates.</p>
+            </div>
 
-        <div class="text-center">
-          <a href="/quiz" class="btn btn-success btn-lg px-4">Continue to Quiz</a>
-        </div>
+            <!-- visuals -->
+            <div class="slide text-center mb-4" data-index="1" style="display: none;">
+                <h3 class="fw-bold mb-4">Courtship: Rituals & Gifts</h3>
+                <div class="ratio ratio-16x9 mx-auto mb-4">
+                    <iframe src="https://www.youtube.com/embed/Azra2UVOwao?si=UdrLbzKnLKI--9sm" title="Visual Displays" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <p class="lead text-white-50">Animals may dance, bring gifts, or perform complex rituals to attract and bond with a mate.</p>
+            </div>
+
+            <div class="slide text-center mb-4" data-index="1" style="display: none;">
+                <h3 class="fw-bold mb-4">Visual Attraction: Displays & Color</h3>
+                <div class="ratio ratio-16x9 mx-auto mb-4">
+                    <iframe src="https://www.youtube.com/embed/nPhVOZiPokA?si=bvLqjwf2S0sckWmV" title="Visual Displays" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                </div>
+                <p class="lead text-white-50">Bright colors and elaborate displays signal health and vitality to potential mates, increasing reproductive success. Many species rely on visual signals such as bright plumage or elaborate dances to attract mates.</p>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+                <button id="prev-slide" class="btn btn-outline-light" style="display: none;">← Previous</button>
+                <div>
+                    <button id="next-slide" class="btn btn-outline-success me-2">Next →</button>
+                    <a id="continue-quiz" href="/quiz" class="btn btn-success" style="display: none;">Continue to Quiz</a>
+                </div>
+            </div>
       </div>
     </div>
   </section>
