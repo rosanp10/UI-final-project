@@ -26,8 +26,18 @@ body {
   position: relative;
 }
 
+.index-hero {
+  background:
+    linear-gradient(rgba(8, 8, 8, 0.48), rgba(8, 8, 8, 0.7)),
+    url('https://i.natgeofe.com/n/3e0e7d6a-cafe-49b4-ab27-86111bab06ac/animals-hero_16x9.jpg?w=1200');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 
 .intro-card {
+  border-radius: 2rem;
   position: relative;
   z-index: 1;
   max-width: 580px;
@@ -42,3 +52,86 @@ body {
   width: 100%;
   animation: fadeIn 0.5s ease-in;
 }
+
+.lesson-intro {
+  background:
+    linear-gradient(rgba(8, 8, 8, 0.5), rgba(8, 8, 8, 0.68)),
+    url('https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?auto=format&fit=crop&w=1600&q=80');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.lesson-intro-card {
+  border-radius: 2rem;
+  background: rgba(14, 18, 14, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.lesson-page {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.lesson-page-card {
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  border-radius: 2rem;
+  background-color: rgba(255, 255, 255, var(--bs-bg-opacity, 0.92));
+  color: #1d1d1d;
+}
+
+.lesson-page-card .text-white-50 {
+  color: #4b5563 !important;
+}
+
+/* Quiz page background */
+.quiz-hero {
+  background:
+    linear-gradient(rgba(6, 10, 6, 0.48), rgba(6, 10, 6, 0.68)),
+    url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Card used on quiz pages — translucent */
+.quiz-card {
+  border-radius: 1.25rem;
+  background: rgba(16, 18, 18, 0.78);
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.45);
+  padding: 1cm;
+}
+
+/* Results page hero and card */
+.results-hero {
+  background:
+    linear-gradient(rgba(6, 10, 6, 0.48), rgba(6, 10, 6, 0.72)),
+    url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+
+.results-card {
+  border-radius: 1.5rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.55);
+  padding: 1cm;
+}
+
+/* Review summary card shown on final lesson page */
+.review-card {
+  border-radius: 1rem;
+  background-color: rgba(255,255,255,0.94);
+  color: #111827;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+  padding: 0.5cm;
+}
+.review-card ul li { margin-bottom: 0.5rem; }
