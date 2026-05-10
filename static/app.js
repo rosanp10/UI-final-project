@@ -37,6 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	const quizForm = document.getElementById('quiz-form');
 	const quizQuestions = document.querySelectorAll('.quiz-question');
 	const quizTitle = document.getElementById('quiz-title');
+	const quizProgressBar = document.getElementById('quiz-progress-bar');
+	const quizProgressText = document.getElementById('quiz-progress-text');
 	const prevBtn = document.getElementById('quiz-prev-btn');
 	const nextBtn = document.getElementById('quiz-next-btn');
 	const submitBtn = document.getElementById('quiz-submit-btn');
@@ -96,6 +98,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		
 		currentQuestion = index;
 		quizTitle.textContent = `Question ${index + 1} of ${quizQuestions.length}`;
+		const progressPercent = Math.round(((index + 1) / quizQuestions.length) * 100);
+		if (quizProgressBar) {
+			quizProgressBar.style.width = `${progressPercent}%`;
+			quizProgressBar.setAttribute('aria-valuenow', String(progressPercent));
+		}
+		if (quizProgressText) {
+			quizProgressText.textContent = `${progressPercent}%`;
+		}
 		
 		prevBtn.style.display = currentQuestion === 0 ? 'none' : 'inline-block';
 		nextBtn.style.display = currentQuestion === quizQuestions.length - 1 ? 'none' : 'inline-block';
@@ -137,3 +147,21 @@ document.addEventListener('DOMContentLoaded', () => {
 	// Initialize first question
 	showQuestion(0);
 });
+
+	// Results explanation toggles
+	document.addEventListener('DOMContentLoaded', () => {
+		document.querySelectorAll('.explain-btn').forEach(btn => {
+			btn.addEventListener('click', () => {
+				const targetId = btn.getAttribute('data-target');
+				const el = document.getElementById(targetId);
+				if (!el) return;
+				if (el.style.display === 'none' || el.style.display === '') {
+					el.style.display = 'block';
+					btn.textContent = 'Hide explanation';
+				} else {
+					el.style.display = 'none';
+					btn.textContent = 'Explain';
+				}
+			});
+		});
+	});

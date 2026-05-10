@@ -3,18 +3,79 @@
 {% block title %}Results - Animal World{% endblock %}
 
 {% block content %}
-  <section class="min-vh-100 d-flex align-items-center justify-content-center text-white py-5">
-    <div class="lesson-container px-4 px-md-5 text-center">
-      <div class="badge rounded-pill {% if is_correct %}bg-success{% else %}bg-danger{% endif %} text-white px-3 py-2 mb-3">Results</div>
+  <section class="results-hero min-vh-100 d-flex align-items-center justify-content-center text-white py-5">
+    <div class="results-card lesson-container px-4 px-md-5 text-center">
+      {% if total_correct == 4 %}
+      <div class="btn btn-lg btn-danger rounded-pill px-5 py-3 mb-4 fw-bold" style="cursor: default; font-size: 1.25rem;">
+        ✓ Perfect Score! All Correct
+      </div>
+      {% else %}
+      <div class="badge rounded-pill {% if total_correct == 4 %}bg-danger{% else %}bg-warning{% endif %} text-white px-3 py-2 mb-3">Results</div>
+      {% endif %}
 
       <h2 class="display-5 fw-bold mb-4">
-        {% if is_correct %}Correct{% else %}Wrong{% endif %}
+        Score: {{ total_correct }}/4
       </h2>
 
       <div class="mx-auto" style="max-width: 520px;">
-        <div class="rounded-3 bg-dark border border-success border-opacity-25 p-4 mb-4 text-start">
-          <p class="text-white-50 mb-2">Your answer: <strong class="text-white">{{ selected_answer or 'No answer selected' }}</strong></p>
+        <div class="rounded-3 {% if is_correct1 %}bg-dark border border-success{% else %}bg-dark border border-danger{% endif %} border-opacity-25 p-4 mb-4 text-start">
+          <div class="fs-5 fw-semibold mb-3">Question 1: Which strategy do deer use?</div>
+          <p class="text-white-50 mb-2">Your answer: <strong class="text-white">{{ answer1 or 'No answer selected' }}</strong></p>
           <p class="text-white-50 mb-0">Correct answer: <strong class="text-white">Competition</strong></p>
+            {% if not is_correct1 %}
+            <div class="mt-3">
+              <button type="button" class="btn btn-sm btn-outline-light explain-btn" data-target="ex1">Explain</button>
+            </div>
+            <div id="ex1" class="explain-text mt-3 text-white-50" style="display: none;">
+              <p><strong>Competition</strong> — animals competing against rivals for mates. Deer often fight with antlers to win access to females.</p>
+              <p>That’s why the correct answer is <strong>Competition</strong>, not visual attraction.</p>
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="rounded-3 {% if is_correct2 %}bg-dark border border-success{% else %}bg-dark border border-danger{% endif %} border-opacity-25 p-4 mb-4 text-start">
+          <div class="fs-5 fw-semibold mb-3">Question 2: What do peacocks use to attract mates?</div>
+          <p class="text-white-50 mb-2">Your answer: <strong class="text-white">{{ answer2 or 'No answer selected' }}</strong></p>
+          <p class="text-white-50 mb-0">Correct answer: <strong class="text-white">Visual display</strong></p>
+            {% if not is_correct2 %}
+            <div class="mt-3">
+              <button type="button" class="btn btn-sm btn-outline-light explain-btn" data-target="ex2">Explain</button>
+            </div>
+            <div id="ex2" class="explain-text mt-3 text-white-50" style="display: none;">
+              <p><strong>Visual display / Visual attraction</strong> — using appearance or movements to look attractive. Peacocks spread colorful feathers and perform displays.</p>
+              <p>The quiz labels this specifically as <strong>Visual display</strong>.</p>
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="rounded-3 {% if is_correct3 %}bg-dark border border-success{% else %}bg-dark border border-danger{% endif %} border-opacity-25 p-4 mb-4 text-start">
+          <div class="fs-5 fw-semibold mb-3">Question 3: What strategy is a penguin giving a pebble?</div>
+          <p class="text-white-50 mb-2">Your answer: <strong class="text-white">{{ answer3 or 'No answer selected' }}</strong></p>
+          <p class="text-white-50 mb-0">Correct answer: <strong class="text-white">Courtship behavior</strong></p>
+            {% if not is_correct3 %}
+            <div class="mt-3">
+              <button type="button" class="btn btn-sm btn-outline-light explain-btn" data-target="ex3">Explain</button>
+            </div>
+            <div id="ex3" class="explain-text mt-3 text-white-50" style="display: none;">
+              <p><strong>Courtship behavior</strong> — actions or rituals meant to bond with a mate. A penguin offering a pebble is a mating ritual.</p>
+              <p>That’s considered <strong>Courtship behavior</strong>.</p>
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="rounded-3 {% if is_correct4 %}bg-dark border border-success{% else %}bg-dark border border-danger{% endif %} border-opacity-25 p-4 mb-4 text-start">
+          <div class="fs-5 fw-semibold mb-3">Question 4: Which strategy relies on appearance?</div>
+          <p class="text-white-50 mb-2">Your answer: <strong class="text-white">{{ answer4 or 'No answer selected' }}</strong></p>
+          <p class="text-white-50 mb-0">Correct answer: <strong class="text-white">Visual attraction</strong></p>
+            {% if not is_correct4 %}
+            <div class="mt-3">
+              <button type="button" class="btn btn-sm btn-outline-light explain-btn" data-target="ex4">Explain</button>
+            </div>
+            <div id="ex4" class="explain-text mt-3 text-white-50" style="display: none;">
+              <p><strong>Visual attraction</strong> — relying mainly on looks/appearance. This is the broad category tied to appearance, colors, feathers, etc.</p>
+              <p>So, “Which strategy relies on appearance?” → <strong>Visual attraction</strong>.</p>
+            </div>
+            {% endif %}
         </div>
 
         <a href="/quiz" class="btn btn-success px-4 me-2">Try Again</a>
