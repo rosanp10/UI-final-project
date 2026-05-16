@@ -19,7 +19,7 @@ LESSON_PAGES = [
         "summary": "Animals may dance, bring gifts, or perform complex rituals to attract and bond with a mate.",
         "detail": "Courtship behavior uses actions and signals that help a potential mate recognize interest and fitness.",
         "video_url": "https://www.youtube.com/embed/Azra2UVOwao?si=r9ImqvWpqaNAdbmb&amp;start=18",
-        "example": "Penguins, birds, and other courtship rituals",
+        "example": "Penguins or birds",
         "background": "https://images.unsplash.com/photo-1501706362039-c6e80948b7b0?auto=format&fit=crop&w=1600&q=80",
     },
     {
