@@ -1,23 +1,14 @@
 # UI-final-project
 
 Mating in the animal world
+# Team
+- Rosa Prado
 
-## Lesson Objects
+## Learning Objectives
 
-The Flask app reads the slide content from the JSON block below.
+- Understand key mating systems in animals (monogamy, polygamy, promiscuity) and their ecological consequences.
+- Recognize real-world examples of species that follow each mating strategy.
+- Improve retention through interactive quizzes: recall terms, match examples, and apply concepts.
+- Practice critical thinking by interpreting behaviors and drawing conclusions from lesson content.
+- Experience how a simple web-based learning game and quiz are structured using Flask, templates, and static assets.
 
-```json
-[
-	{
-		"type_label": "Type 1",
-		"title": "Monogamy",
-		"emoji": "🦢",
-		"color": "#4e9af1",
-		"description": "<strong>Monogamy</strong> is when an animal pairs with a single partner, often for a whole breeding season or even for life. This strategy is common in birds - roughly 90 % of bird species are socially monogamous. Both parents typically share duties like nest building, incubation, and raising young, which increases offspring survival.",
-		"video_url": "https://www.youtube.com/embed/dMnJGEXIZoE?rel=0",
-		"video_title": "Monogamy in animals - albatrosses and swans",
-		"fun_fact": "<strong>Fun Fact:</strong> Albatrosses can live up to 70 years and often pair with the same partner for decades, performing elaborate courtship dances every time they reunite after a long migration.",
-		"examples": ["🦢 Swans", "🐺 Wolves", "🦅 Bald Eagles", "🦫 Beavers", "🐦 Albatrosses"]
-	}
-]
-```

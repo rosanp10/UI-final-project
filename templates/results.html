@@ -18,8 +18,8 @@
       </h2>
 
       <div class="mx-auto" style="max-width: 520px;">
-        <div class="rounded-3 {% if is_correct1 %}bg-dark border border-success{% else %}bg-dark border border-danger{% endif %} border-opacity-25 p-4 mb-4 text-start">
-          <div class="fs-5 fw-semibold mb-3">Question 1: Which strategy do deer use?</div>
+        <div class="rounded-3 result-item {% if is_correct1 %}correct{% else %}incorrect{% endif %} {% if is_correct1 %}bg-dark border border-success{% else %}bg-dark border border-danger{% endif %} border-opacity-25 p-4 mb-4 text-start">
+          <div class="question-title fs-5 fw-semibold mb-3">Question 1: Which strategy do deer use?</div>
           <p class="text-white-50 mb-2">Your answer: <strong class="text-white">{{ answer1 or 'No answer selected' }}</strong></p>
           <p class="text-white-50 mb-0">Correct answer: <strong class="text-white">Competition</strong></p>
             {% if not is_correct1 %}
@@ -33,8 +33,8 @@
             {% endif %}
         </div>
 
-        <div class="rounded-3 {% if is_correct2 %}bg-dark border border-success{% else %}bg-dark border border-danger{% endif %} border-opacity-25 p-4 mb-4 text-start">
-          <div class="fs-5 fw-semibold mb-3">Question 2: What do peacocks use to attract mates?</div>
+        <div class="rounded-3 result-item {% if is_correct2 %}correct{% else %}incorrect{% endif %} {% if is_correct2 %}bg-dark border border-success{% else %}bg-dark border border-danger{% endif %} border-opacity-25 p-4 mb-4 text-start">
+          <div class="question-title fs-5 fw-semibold mb-3">Question 2: What do peacocks use to attract mates?</div>
           <p class="text-white-50 mb-2">Your answer: <strong class="text-white">{{ answer2 or 'No answer selected' }}</strong></p>
           <p class="text-white-50 mb-0">Correct answer: <strong class="text-white">Visual display</strong></p>
             {% if not is_correct2 %}
@@ -48,8 +48,8 @@
             {% endif %}
         </div>
 
-        <div class="rounded-3 {% if is_correct3 %}bg-dark border border-success{% else %}bg-dark border border-danger{% endif %} border-opacity-25 p-4 mb-4 text-start">
-          <div class="fs-5 fw-semibold mb-3">Question 3: What strategy is a penguin giving a pebble?</div>
+        <div class="rounded-3 result-item {% if is_correct3 %}correct{% else %}incorrect{% endif %} {% if is_correct3 %}bg-dark border border-success{% else %}bg-dark border border-danger{% endif %} border-opacity-25 p-4 mb-4 text-start">
+          <div class="question-title fs-5 fw-semibold mb-3">Question 3: What strategy is a penguin giving a pebble?</div>
           <p class="text-white-50 mb-2">Your answer: <strong class="text-white">{{ answer3 or 'No answer selected' }}</strong></p>
           <p class="text-white-50 mb-0">Correct answer: <strong class="text-white">Courtship behavior</strong></p>
             {% if not is_correct3 %}
@@ -63,8 +63,8 @@
             {% endif %}
         </div>
 
-        <div class="rounded-3 {% if is_correct4 %}bg-dark border border-success{% else %}bg-dark border border-danger{% endif %} border-opacity-25 p-4 mb-4 text-start">
-          <div class="fs-5 fw-semibold mb-3">Question 4: Which strategy relies on appearance?</div>
+        <div class="rounded-3 result-item {% if is_correct4 %}correct{% else %}incorrect{% endif %} {% if is_correct4 %}bg-dark border border-success{% else %}bg-dark border border-danger{% endif %} border-opacity-25 p-4 mb-4 text-start">
+          <div class="question-title fs-5 fw-semibold mb-3">Question 4: Which strategy relies on appearance?</div>
           <p class="text-white-50 mb-2">Your answer: <strong class="text-white">{{ answer4 or 'No answer selected' }}</strong></p>
           <p class="text-white-50 mb-0">Correct answer: <strong class="text-white">Visual attraction</strong></p>
             {% if not is_correct4 %}

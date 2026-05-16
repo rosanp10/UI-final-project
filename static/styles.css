@@ -135,3 +135,39 @@ body {
   padding: 0.5cm;
 }
 .review-card ul li { margin-bottom: 0.5rem; }
+
+/* Results items and example blocks for better visual hierarchy */
+.result-item {
+  border-radius: 0.9rem;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.result-item:hover { transform: translateY(-3px); box-shadow: 0 18px 36px rgba(0,0,0,0.32); }
+.result-item.correct { border-left: 6px solid #22c55e; }
+.result-item.incorrect { border-left: 6px solid #ef4444; }
+.result-item .question-title { font-weight: 600; margin-bottom: .4rem; color: #ffffff; }
+.result-item p { color: rgba(255,255,255,0.78); }
+.explain-btn { background: transparent; border: 1px solid rgba(255,255,255,0.08); color: #fff; padding: .35rem .6rem; border-radius: .5rem; }
+.explain-btn:hover { background: rgba(255,255,255,0.03); }
+.explain-text { margin-top: .6rem; color: rgba(255,255,255,0.78); }
+
+/* Example block used across lesson views */
+.example-block {
+  border-radius: 0.9rem;
+  background: linear-gradient(180deg, rgba(34,197,94,0.03), rgba(255,255,255,0.02));
+  border: 1px solid rgba(34,197,94,0.08);
+  padding: .9rem 1rem;
+  margin-bottom: 1rem;
+}
+.example-title { color: #16a34a; font-weight: 700; letter-spacing: .04em; }
+.example-content { font-size: 1.05rem; color: #0b1220; }
+.lesson-page .example-content { color: #065f46; }
+.example-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr; gap: .45rem; }
+.example-list li { display: flex; gap: .6rem; align-items: flex-start; padding: .25rem 0; color: rgba(255,255,255,0.9); }
+.example-list li strong { color: #fff; }
+
+@media (min-width: 768px) {
+  .example-list { grid-template-columns: repeat(2, 1fr); }
+}
